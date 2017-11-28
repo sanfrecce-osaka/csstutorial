@@ -17,10 +17,12 @@ img {
 }
 
 .container {
+    width: 95%;
+    max-width: 1200px;
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin: 0 15px;
+    margin: 0 auto;
     box-shadow: 0 0 5px 1px;
 }
 
@@ -116,6 +118,8 @@ img {
 }
 
 .top-ads__item {
+    width: 33%;
+    max-width: 380px;
     margin: 10px 0;
 }
 
@@ -136,6 +140,63 @@ img {
     color : #24140e;
     font-size: 1.8rem;
     font-weight: bold;
+    position: relative;
+}
+
+.main-header:before {
+    content: '';
+    display: block;
+    border: solid 25px;
+    border-color: transparent;
+    border-top-color: #9fa09e; /* アッシュグレイ */
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+.main-header:after {
+    content: '';
+    display: block;
+    border: solid 25px;
+    border-color: transparent;
+    border-bottom-color: lightgray;
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    transform: rotate(45deg);
+}
+
+.main-header__title {
+    line-height: 56px;
+    padding-left: 56px;
+    position: relative;
+}
+
+.main-header__title:before {
+    content: '';
+    display: block;
+    background-color: #aaaab0; /* シルバーグレイ */
+    border-right: #504946 solid 0.7rem; /* トープ */
+    height: 0.7rem;
+    width: 0.7rem;
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    margin-top: -0.7rem;
+}
+
+.main-header__title:after {
+    content: '';
+    display: block;
+    background-color: #504946; /* トープ */
+    border-right: #aaaab0 solid 0.7rem; /* シルバーグレイ */
+    height: 0.7rem;
+    width: 0.7rem;
+    position: absolute;
+    bottom: 50%;
+    left: 16px;
+    margin-bottom: -0.7rem;
 }
 
 .article {
@@ -146,9 +207,36 @@ img {
 
 .article__title {
     margin-bottom: 15px;
+    padding-left: 40px;
+    line-height: 40px;
     color: #24140e;
     font-size: 1.6rem;
     font-weight: bold;
+    position: relative;
+}
+
+.article__title:before {
+    content: '';
+    display: block;
+    background-color: #aaaab0; /* シルバーグレイ */
+    height: 1.3rem;
+    width: 0.7rem;
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    margin-top: -1.3rem;
+}
+
+.article__title:after {
+    content: '';
+    display: block;
+    background-color: #504946; /* トープ */
+    height: 1.3rem;
+    width: 0.7rem;
+    position: absolute;
+    bottom: 50%;
+    left: 16px;
+    margin-bottom: -1.3rem;
 }
 
 .article__paragraph {
@@ -161,9 +249,34 @@ img {
 }
 
 .article__sub-title {
+    padding-left: 20px;
     margin: 15px 0;
     font-size: 1.4rem;
     font-weight: bold;
+    position: relative;
+}
+
+.article__sub-title:before {
+    content: '';
+    display: block;
+    background-color: #504946; /* トープ */
+    height: 1rem;
+    width: 0.3rem;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    margin-top: -1.3rem;
+}
+
+.article__sub-title:after {
+    content: '';
+    display: block;
+    border: solid 8px;
+    border-color: transparent;
+    border-left-color: #504946; /* トープ */
+    position: absolute;
+    left: 7px;
+    top: 4px;
 }
 
 .article__unorder-list {
@@ -175,10 +288,56 @@ img {
     list-style: disc;
 }
 
+.article__blockquote {
+    padding: 30px 0 10px 25px;
+    margin: 50px 0 0 10px;
+    border-left: solid 10px #aaaab0; /* シルバーグレイ */
+    position: relative;
+}
+
+.article__blockquote:after {
+    content: '"';
+    padding: 0 15px;
+    position: absolute;
+    left: -30px;
+    top: -15px;
+    background: #aaaab0; /* シルバーグレイ */
+    border-radius: 50%;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
 .article__sub-sub-title {
+    padding-left: 30px;
     margin-top: 15px;
     font-size: 1.2rem;
     font-weight: bold;
+    position: relative;
+}
+
+.article__sub-sub-title:before {
+    content: '';
+    display: block;
+    background-color: #504946; /* トープ */
+    height: 0.7rem;
+    width: 0.7rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+}
+
+.article__sub-sub-title:after {
+    content: '';
+    display: block;
+    background-color: #aaaab0; /* シルバーグレイ */
+    height: 0.7rem;
+    width: 0.7rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 15px;
 }
 
 .article__order-list-item {
@@ -192,9 +351,35 @@ img {
 }
 
 .form__title {
+    padding-left: 50px;
     margin-bottom: 15px;
     font-size: 1.6rem;
     font-weight: bold;
+    position: relative;
+}
+
+.form__title:before {
+    content: '';
+    display: block;
+    width: 2.8rem;
+    height: 1.6rem;
+    border: solid 2px black;
+    position: absolute;
+    top: -3px;
+    left: -5px;
+}
+
+.form__title:after {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-top: solid 2px black;
+    border-right: solid 2px black;
+    transform: rotate(135deg);
+    position: absolute;
+    top: -18px;
+    left: 2px;
 }
 
 .form-item {
@@ -282,28 +467,51 @@ img {
 }
 
 .form-item__actions-item {
-    width: 40%;
+    width: 48%;
 }
 
 .form-item__action {
     width: 100%;
-    padding: 50px;
-    font-size: 1.4rem;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: solid 1px black;
+}
+
+.is-submit {
+    background: #24140e; /* ランプブラック */;
+    color: white;
+}
+
+.is-reset {
+    background: #aaaab0; /* ストームグレイ */
+    color: #504946; /* トープ */
 }
 
 .aside {
     width: 20%;
+    padding-top: 10px;
     background: #504946; /* トープ */
 }
 
-.aside-abs__link {
-    width: 70%;
-    margin: 10px;
+.aside-ads__items {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
 }
 
-.aside-abs__image {
-    width: 70%;
-    margin: 10px;
+.aside-ads__item {
+    display: flex;
+    justify-content: center;
+}
+
+.aside-ads__link {
+    text-align: center;
+}
+
+.aside-ads__image {
+    width: 95%;
+    max-width: 210px;
+    margin: 5px 0 0;
 }
 
 .local-nav__items {
@@ -337,11 +545,12 @@ img {
 }
 
 .footer-nav__items {
-    margin: 15px;
+    width: 30%;
+    margin: 15px 15px 15px 15px;
 }
 
 .footer-nav__item {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .footer-nav__link:before {
@@ -357,7 +566,7 @@ img {
 .about-author {
     width: 45%;
     padding: 15px;
-    margin: 15px;
+    margin: 15px 0;
     border-radius: 5px;
     background: lightgray;
 }
@@ -380,7 +589,7 @@ img {
 }
 
 .about-author__term {
-    width: 15%;
+    width: 16%;
     padding-right: 10px;
     text-align: right;
 }
@@ -391,4 +600,5 @@ img {
 
 .footer-copyright {
     margin: 15px;
+    color: white;
 }
